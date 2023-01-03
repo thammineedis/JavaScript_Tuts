@@ -1,0 +1,23 @@
+nameoftheArray = [keyword/keywords];
+
+numArray = [1, 2, 3, 4];
+
+console.log("Number Array length is", numArray.length);
+
+*******************************
+
+nameArray = ["James", "Doe", "Jones", "Kim", "Dawn", "Joe"];
+
+console.log("Names Array length is", nameArray.length);
+
+*******************************
+
+club both Arrays:
+
+result = [...numArray, ...nameArray];
+
+console.log("After clubbing both will look like this:", result);
+
+
+
+

@@ -1,0 +1,30 @@
+Sir Email ID: weblearningfuse@gmail.com
+
+
+********************
+JavaScript Tutorial:
+********************
+
+These 3 are very important to learn JavaScript
+
+1. Array	2. Strings	3. Objects
+
+
+Need to Practice Inbuilt Functions for below: including ['Spread Operator' Function]
+
+1. Push		2. Pop		3. Index
+
+
+Inbuilt Functions:
+1. Includes	2. Concat
+
+'Includes' function to find keyword exists or not?
+
+'Concat' function is used to combine two keywords.
+
+Need to Practice Inbuilt Strings for below:
+
+1. Split	2. substr	3. slice
+
+
+

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practices</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: .5rem;
+            font-size: 16px;
+            box-sizing: border-box;
+            font-family: 'Play', 'Philosopher', serif, sans-serif;
+            line-height: 1.5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            margin: 0 20px;
+        }
+
+        ul span {
+            color: #ffd102;
+            text-decoration: underline;
+        }
+
+        .outer h3 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            color: #000;
+            background-color: #ffd102;
+            padding: 6px 15px;
+            border-radius: 4px;
+            font-family: 'Philosopher';
+            font-weight: 400;
+        }
+
+        .outer h4 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            color: #ffd900;
+            padding: 10px 0;
+            border-radius: 4px;
+        }
+
+        .outer pre {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            color: #fff;
+            padding: 5px 25px;
+            font-style: italic;
+            white-space: pre-line;
+            color: #e2e2e2;
+            font-size: 16px;
+        }
+
+        .outer {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        fieldset {
+            background-color: #0b5cf3;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            padding: 20px;
+            margin: 10px 0 35px;
+            font-family: 'Play';
+            width: 49%;
+        }
+
+        fieldset legend {
+            background-color: #0040b6;
+            padding: 6px 16px;
+            border-radius: 4px;
+            margin: 0;
+            font-family: 'Philosopher';
+            font-size: 20px;
+        }
+
+        fieldset button {
+            background-color: #fff;
+            color: #0040b6;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Philosopher';
+            font-size: 16px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        fieldset button:hover {
+            color: #0b5cf3;
+            background-color: #f8f8f8;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="outer">
+        <fieldset>
+            <legend>Change HTML Content</legend>
+            <p>The example below "finds" an HTML element (with id="demo"), and changes the element content (innerHTML)
+                from
+                "Hello World":</p>
+            <p>-&nbsp;-&nbsp;-</p>
+
+            <p id="demo">Hello World!</p>
+            <button type="button"
+                onclick='document.getElementById("demo").innerHTML = "Yes, we are able to change HTML content with JavaScript!"'>Click
+                Me to Change Content!</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Change An HTML Attribute</legend>
+            <p>JavaScript can change HTML attribute values.<br>
+                In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+            <button onclick="document.getElementById('myImage').src='/images/active_state.png'">Red Signal</button>
+
+            <img id="myImage" src="/images/default_state.png" style="width:70px">
+
+            <button onclick="document.getElementById('myImage').src='/images/default_state.png'">Green Signal</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Change CSS Style</legend>
+
+            <p id="cssStyle">JavaScript can change the 'CSS' style of an HTML element.</p>
+            <button type="button" onclick="document.getElementById('cssStyle').style.fontSize='28px'">Click
+                Me!</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Hide and Show Elements</legend>
+
+            <p id="hide">1. JavaScript can hide HTML elements.</p>
+            <p id="show" style="display:none;">2. JavaScript can Show HTML elements.</p>
+            <button type="button" onclick="document.getElementById('hide').style.display='none'">Hide Paragraph -
+                1</button>
+            <button onclick="document.getElementById('show').style.display='block'">Show Paragraph 2</button>
+        </fieldset>
+
+        <h3>Functions & Events (A function can be called when an event occurs, It means when the user clicks a button)
+        </h3>
+
+        <fieldset>
+            <legend>Change Content with Function</legend>
+
+            <p id="text">Some text here...</p>
+            <button type="button" onclick="myContent()">Click Me to Change the Content!</button>
+
+            <h4>Code Example:</h4>
+            <pre>
+                function functionName() {
+                    document.getElementById('idName').innerHTML = "Content here...";
+                }
+            </pre>
+
+            <h4>Call the Function</h4>
+            <pre>
+                onclick="functionName()"
+            </pre>
+        </fieldset>
+
+        <fieldset>
+            <legend>Display Possibilities</legend>
+
+            <ul>
+                <li>Writing into an HTML element, using <span>innerHTML</span>.</li>
+                <li>Writing into the HTML output using <span>document.write()</span>.</li>
+                <li>Writing into an alert box, using <span>window.alert()</span>.</li>
+                <li>Writing into the browser console, using <span>console.log()</span>.</li>
+            </ul>
+
+            <h4>Code Example:</h4>
+            <pre>
+                // For innerHTML
+                document.getElementById("demo").innerHTML = 5 + 6;
+
+                // For document.write
+                document.write(5 + 6);
+
+                // For window.alert
+                window.alert(5 + 6);
+
+                // For console.log
+                console.log(5 + 6);
+            </pre>
+        </fieldset>
+
+        <h3>Examinated myself</h3>
+    </div>
+
+    Q. Define a para to change the content upon button onclick?
+
+    <p id="chgCnt">Some text here.</p>
+
+    <button onclick='document.getElementById("chgCnt").innerHTML = "Content changed successfully!"'>Change Content
+        Now</button>
+
+    <br>---------------------********---------------------<br>
+
+    Q. Define a para to change the content upon button onclick using a function?
+
+    <p id="fncCont">Lorem ipsum</p>
+
+    <button onclick="myFunction()">Change Content</button>
+
+    <script>
+        function myFunction() {
+            document.getElementById("fncCont").innerHTML = "Now content changed with some dummy text";
+        } 
+    </script>
+
+    <br>---------------------********---------------------<br>
+
+    Q. Define a para to change it's style with css upon button onclick?
+
+    <p id="fSize">Font size will be changed if user clicked on below button!</p>
+
+    <button onclick='document.getElementById("fSize").style.fontSize="30px"'>Change Font Size</button>
+
+    <br>---------------------********---------------------<br>
+
+    Q. How to hide and show a div/para/any element by clicking on a button?<br>
+
+    To Hide an element:<br>
+
+    <div id="hideMe">This div will be hidden if user clicked on below Hide button</div>
+
+    <button onclick='document.getElementById("hideMe").style.display="none"'>Click me to HIDE something</button><br>
+
+
+    To Show an element:<br>
+
+    <div id="showMe" style="display:none;">This div will be shown if user clicked on below Show button</div>
+
+    <button onclick='document.getElementById("showMe").style.display="block"'>Click me to SHOW something</button>
+
+    <br>---------------------********---------------------<br>
+
+    Q. Change an html attribute for <img> source by clicking a button?<br>
+
+    <button onclick='document.getElementById("myImg").src="/images/active_state.png"'>Danger Zone</button>
+
+    <img id="myImg" src="/images/default_state.png">
+
+    <button onclick='document.getElementById("myImg").src="/images/default_state.png"'>Green Zone</button>
+
+    <!-- JavaScript Declarations with detailed Comments -->
+    <script>
+        function myContent() {
+            document.getElementById('text').innerHTML = "Yes, we changed Content using function by clicking the button. It's so easy enough right?";
+        }
+    </script>
+</body>
+
+</html>

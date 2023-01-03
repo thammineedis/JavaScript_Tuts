@@ -1,0 +1,67 @@
+Q. Define a para to change the content upon button click?
+
+ANS:	<p id="chgCnt">Some text here.</p>
+
+	<button onclick='document.getElementById("chgCnt").innerHTML = "Content changed successfully!"'>Change Content Now</button>
+
+---------------------********---------------------
+
+Q. Define a para to change the content upon button onclick using a function?
+
+ANS:	<p id="fncCont">Lorem ipsum</p>
+
+	<button onclick='myFunction()'>Change Content</button>
+
+	<script>
+		function myFunction(){
+			document.getElementById("fncCont").innerHTML = "Now content changed with some dummy text";
+		}
+	</script>
+
+---------------------********---------------------
+
+Q. Define a para to change it's style with css upon button onclick?
+
+ANS:	<p id="fSize">Font size will be changed if user clicked on below button!</p>
+
+	<button onclick='document.getElementById("fSize").style.fontSize = "30px"'>Change Font Size</button>
+
+---------------------********---------------------
+
+Q. How to hide and show a div/para/any element by clicking on a button?
+
+ANS:	To Hide an element:
+
+	<div id="hideMe">This div will be hidden if user clicked on below Hide button</div>
+
+	<button onclick='document.getElementById("hideMe").style.dispaly = "none"'>Click me to HIDE something</button>
+
+	
+	To Show an element:
+
+	<div id="showMe" style="display:none;">This div will be shown if user clicked on below Show button</div>
+
+	<button onclick='document.getElementById("showMe").style.dispaly = "block"'>Click me to SHOW something</button>
+
+---------------------********---------------------
+
+Q. Change an html attribute for <img> source by clicking a button?
+
+ANS:	<img id="myImg" src="default_imageurl.png">
+
+	<button onclick='document.getElementById("myImg").src="active_imageurl.png"'>Show Active State</button>
+
+	<button onclick='document.getElementById("myImg").src="default_imageurl.png"'>Show Default State</button>
+
+
+
+
+
+
+
+
+
+
+
+
+

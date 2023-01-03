@@ -1,0 +1,16 @@
+to find out array we must use constructor
+
+shallow copy		deep copy
+
+Object.assign 
+
+1. length
+2. JSON stringify and parse
+3. typeof
+4. Object.assign
+
+
+
+
+
+
