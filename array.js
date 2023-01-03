@@ -73,3 +73,5 @@ function checkAge(age) {
 
 result = [...ageGroup];
 console.log("Result is:", result);
+
+//
