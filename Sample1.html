@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture - 1 | Where to Place JavaScript in HTML Document?</title>
+
+    <script>
+        // document.getElementById("heading").style.color = 'red';
+
+        // By Practicing to place JavaScript in within Head tag will Generate below error on Browser Console. Why because browser by default read HTML content from TOP to BOTTOM. So in this case our script at in Line no: 11 and your HTML element at Line No: 21.
+
+        /* Uncaught TypeError: Cannot read properties of null (reading 'style')
+    at Sample1.html: 11: 43 */
+    </script>
+</head>
+
+<body>
+    <h1 id="heading">This is a Heading Tag</h1>
+    <h1>This is second Heading Tag</h1>
+    <h1>This is third Heading Tag</h1>
+
+    <script>
+        document.getElementById("heading").style.color = 'red';
+
+        // Now we moved JavaScript from Head Section to body section. 
+        // This is the best practice to place ur scripts exactly before close tag of the body.
+        // Now it will give your output without any error/warning. 
+    </script>
+</body>
+
+</html>

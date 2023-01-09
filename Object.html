@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture - 1 | Objects in JavaScript</title>
+</head>
+
+<body>
+    <h3>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A
+        cup is
+        an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way,
+        JavaScript
+        objects can have properties, which define their characteristics.</h3>
+
+    <h6>Example:</h6>
+    <h4>
+        Like here in my Example I can choose a person to declare as an Object. <br>
+        Object should be within Curly Braces{}. Properties seperated with Comma(,)
+        <pre>
+            var objectName = {name:'James', email:'james@gmail.com', designation:'developer', age:32, mob:12345};
+        </pre>
+    </h4>
+
+    <script>
+        var person = { name: 'Matrix', age: 32, gender: 'Male', email: 'matrix@gmail.com', height: 5.11, color: 'fair' };
+
+        person.mobile = 12345; // This method is called as Dot Notaion. We are able to call property this way also.
+        person['designation'] = 'Web Developer'; // This method is called as Square Notation. Within Suqare Brackets we can call properties.
+
+        // typeof() is a Builtin keyword to identify Data Type from an Object
+        console.log(typeof (person.email)); // Output will show email as a 'string'.
+
+        console.log(person);
+
+    </script>
+</body>
+
+</html>
