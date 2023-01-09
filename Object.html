@@ -27,14 +27,49 @@
     <script>
         var person = { name: 'Matrix', age: 32, gender: 'Male', email: 'matrix@gmail.com', height: 5.11, color: 'fair' };
 
-        person.mobile = 12345; // This method is called as Dot Notaion. We are able to call property this way also.
-        person['designation'] = 'Web Developer'; // This method is called as Square Notation. Within Suqare Brackets we can call properties.
+        person.mobile = 12345; // This method is called as 'DOT NOTATION'. We are able to call property this way also.
+        person['designation'] = 'Web Developer'; // This method is called as 'SQUARE NOTATION'. Within Suqare Brackets we can call properties.
 
         // typeof() is a Builtin keyword to identify Data Type from an Object
         console.log(typeof (person.email)); // Output will show email as a 'string'.
 
-        console.log(person);
+        console.log(person); // Output will show as an 'Object'
 
+    </script>
+
+    <h1>Accessing Objects Better Way!</h1>
+
+    <script>
+        var tutor = {
+            fname: "Krishna",
+            lname: "Prasad",
+            email: "krishnaprasad@gmail.com",
+            city: "California",
+            role: "Web Designer",
+            mobile: 9948542732
+        };
+
+        // This is one method to access object values
+        document.write(tutor.fname + "<br>");
+        document.write(tutor.lname + "<br>");
+        document.write(tutor.email + "<br>");
+
+        // This is another way to access object values
+        document.write(tutor.fname + "<br>" + tutor.lname + "<br>" + tutor.email + "<br>" + tutor.role + "<br><br>")
+
+        // This is DESTRUCTURING Method, finest way to access the oject values
+        var { fname, lname, email, city, role, mobile } = tutor;
+
+        document.write(
+            fname + ", " + lname + ", " + email + ", " + city + ", " + role + ", " + mobile
+        );
+
+        // ****************************************************
+        // For In Loop
+
+        for (xyz in tutor) {
+            console.log(xyz + ":" + tutor[xyz]);
+        }
     </script>
 </body>
 
