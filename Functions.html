@@ -38,6 +38,25 @@
 
         // Type-3 Call Function or Execute or Invoke Function
         sayHelloToMe();
+
+        // ECMAScript 6 Methods
+
+        // Create a function using ECMAScript 6
+        var sayHi = () => { // Arrow Function or Fat Arrow Function in ES6
+            console.log("This is ECMAScript function...")
+        }
+
+        sayHi();
+
+        // Direct calling Method using ES6
+        (function () {
+            console.log("This is a Immediately invoked Function. No need to call the function It will automatically call itself...");
+        })();
+
+        // Direct Calling Arrow Function ot Fat Arrow Function in ES6
+        (() => {
+            console.log("This is also Immediately Invoked Fat Arrow or Arrow Function...")
+        })();
     </script>
 </body>
 
